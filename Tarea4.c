@@ -78,16 +78,24 @@ int main() {
     inicializar_tabla(&mi_tabla);
 
     //Insertar elementos con el mismo valor pero clave distinta
-    insertar(&mi_tabla, "Usuario_1", 500);
-    insertar(&mi_tabla, "Usuario_2", 500);
+    insertar(&mi_tabla, "Alhondra", 500);
+    insertar(&mi_tabla, "Fabian", 400);
+    insertar(&mi_tabla, "Carmen", 350);
 
     //Generar una colisión (ambas claves suman 195 ASCII, dando el mismo índice 95)
     insertar(&mi_tabla, "ab", 100);
     insertar(&mi_tabla, "ba", 200);
 
     //Probar Búsqueda pasando clave y valor
-    printf("Buscando ('Usuario_1', 500): %s\n", 
-            buscar(&mi_tabla, "Usuario_1", 500) ? "Encontrado" : "No encontrado");
+    printf("Buscando ('Alhondra', 500): %s\n", 
+            buscar(&mi_tabla, "Alhondra", 500) ? "Encontrado" : "No encontrado");
+     printf("Buscando ('Fabian', 500): %s\n", 
+            buscar(&mi_tabla, "Fabian", 500) ? "Encontrado" : "No encontrado");
+     printf("Buscando ('Fabian', 400): %s\n", 
+            buscar(&mi_tabla, "Fabian", 400) ? "Encontrado" : "No encontrado");
+     printf("Buscando ('Carmen', 350): %s\n", 
+            buscar(&mi_tabla, "Carmen", 350) ? "Encontrado" : "No encontrado");
+            
     printf("Buscando ('ba', 200) [tras colision]: %s\n", 
             buscar(&mi_tabla, "ba", 200) ? "Encontrado" : "No encontrado");
     printf("Buscando ('ba', 999) [valor incorrecto]: %s\n", 

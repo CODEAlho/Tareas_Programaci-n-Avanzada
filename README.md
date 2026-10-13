@@ -10,7 +10,12 @@ Estructura Dinámica: Manejo dinámico de memoria mediante `malloc` y `free`.
 Nodos Centinela:Utilización de nodos de inicio (`cabeza`) y fin (`cola`) para simplificar la inserción y extracción de elementos.
 Doble Enlace:Cada nodo cuenta con punteros `siguiente` y `anterior` para facilitar la manipulación de la lista.
 Comportamiento Dual: Demostración de comportamiento FIFO (First In, First Out) y LIFO (Last In, First Out) sobre la misma estructura base.
-Tarea 3: SE evalua un polinomio matemático P(x) de dos maneras diferentes para medir cu´al es más rípido en la CPU, usando el Método escalar y el Método SIMD/AVX (vectorizado)
+
+Tarea 3: Se evalua un polinomio matemático P(x) de dos maneras diferentes para medir cu´al es más rípido en la CPU, usando el Método escalar y el Método SIMD/AVX (vectorizado)
+
+Tarea 4: Tabla Hash de 100 posiciones con resolución de colisiones mediante listas enlazadas. Utiliza una función hash que suma los valores ASCII de la clave para calcular su casilla (0 a 99). Al insertar, asigna memoria dinámica para cada nodo y su clave, guardándolo al inicio del casillero correspondiente, lo que permite almacenar claves distintas con el mismo valor sin perder datos. La búsqueda recorre la lista del casillero comprobando al mismo tiempo la clave y el valor especificado. Finalmente, la función de liberación limpia todos los nodos y cadenas mediante free() para evitar fugas de memoria.
+
+
 ## Cómo compilar y ejecutar
 
 Tarea 1: Dado que el código utiliza instrucciones intrínsecas modernas de x86, necesitas compilarlo con la bandera `-mbmi2` y `-adx`.
@@ -22,6 +27,8 @@ Tarea 1: Dado que el código utiliza instrucciones intrínsecas modernas de x86,
 ./Tarea2.o
 *Tarea 3: g++ -O3 -mavx2 Tarea3.cpp -o bench_horner
 ./bench_horner
+*Tarea 4: gcc Tarea4.c -o Tarea4
+./Tarea4
 
 
 
