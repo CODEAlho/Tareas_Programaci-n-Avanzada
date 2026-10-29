@@ -17,6 +17,9 @@ Tarea 4: Tabla Hash de 100 posiciones con resolución de colisiones mediante lis
 
 Tarea 5: Este código implementa un Algoritmo Genético en lenguaje C diseñado para encontrar el valor mínimo de una función matemática compleja (la función de Rastrigin) simulando el proceso de evolución natural.En lugar de probar números al azar, el programa codifica las posibles soluciones (coordenadas X e Y) dentro de un "ADN" de 64 bits. A lo largo de múltiples iteraciones, el algoritmo evalúa qué candidatos tienen el mejor puntaje, los combina dividiendo y mezclando sus bits, y los altera mediante mutaciones aleatorias para generar una nueva descendencia cada vez más apta. Finalmente, registra el progreso de la mejor solución de cada generación en la terminal y exporta los datos a un archivo resultados.csv para su posterior análisis.
 
+Tarea 6: Compresor y Descompresor de Archivos con Algoritmo de Huffman
+Este proyecto implementa un sistema de compresión y descompresión de archivos de texto utilizando el Algoritmo de Codificación de Huffman en Python. Permite reducir el tamaño de archivos de texto plano sin pérdida de información (lossless compression) reemplazando caracteres frecuentes por secuencias de bits más cortas.
+
 ## Cómo compilar y ejecutar
 
 Tarea 1: Dado que el código utiliza instrucciones intrínsecas modernas de x86, necesitas compilarlo con la bandera `-mbmi2` y `-adx`.
@@ -32,6 +35,8 @@ Tarea 1: Dado que el código utiliza instrucciones intrínsecas modernas de x86,
 ./Tarea4
 *Tarea 5: gcc Tarea5.c -o Tarea5 -lm
 ./Tarea5
-
+*Tarea 6: 
+python 3 Tarea6_com.py
+python 3 Tarea6_descom.py
 
 
